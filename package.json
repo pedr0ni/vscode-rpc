@@ -1,0 +1,47 @@
+{
+    "name": "vscode-rpc",
+    "displayName": "vscode-rpc",
+    "description": "Visual Studio Code Discord Rich Presence",
+    "version": "0.0.1",
+    "publisher": "mpedroni",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.activateRich",
+        "onCommand:extension.disableRich"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.activateRich",
+                "title": "Ativar Discord Rich Presence"
+            },
+            {
+                "command": "extension.disableRich",
+                "title": "Desativar Discord Rich Presence"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "discord-rpc": "^3.0.0-beta.12"
+    }
+}
