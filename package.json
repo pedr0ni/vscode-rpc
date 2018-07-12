@@ -16,6 +16,16 @@
     "categories": [
         "Other"
     ],
+    "keywords": [
+		"discord",
+		"vscode",
+		"rich",
+		"presence",
+		"rich presence",
+        "rpc",
+        "vscode-rpc",
+        "discord-rpc"
+	],
     "activationEvents": [
         "onCommand:extension.activateRich",
         "onCommand:extension.disableRich"
