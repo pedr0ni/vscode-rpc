@@ -3,7 +3,7 @@
     "displayName": "VSCode Rich Presence",
     "description": "Visual Studio Code Discord Rich Presence",
     "author": "Matheus Pedroni",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "mpedroni",
     "repository": {
 		"type": "git",
