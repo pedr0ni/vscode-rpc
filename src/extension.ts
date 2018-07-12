@@ -6,7 +6,7 @@ const ClientId = '466039114878418944';
 DiscordRPC.register(ClientId);
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 
-let langs = ['typescript', 'javascript', 'php', 'css', 'html', 'json'];
+let langs = ['typescript', 'javascript', 'php', 'css', 'html', 'json', 'markdown'];
 let timestamp: number;
 
 export function activate(context: vscode.ExtensionContext) {
@@ -27,17 +27,18 @@ export function activate(context: vscode.ExtensionContext) {
         });
     });
 
-    let cmdDisable = vscode.commands.registerCommand('extension.disableRich', () => {
-        rpc.destroy();
+    let cmdDisable = vscode.commands.registerCommand('extension.disableRich', async () => {
+        if (!rpc) return; 
+        await rpc.destroy();
         vscode.window.showInformationMessage('Discord Rich Presence Disabled !');
     });
 
-    context.subscriptions.push(cmdActivate);
-    context.subscriptions.push(cmdDisable);
+    context.subscriptions.push(cmdActivate, cmdDisable);
 }
 
-export function deactivate() {
-    rpc.destroy();
+export async function deactivate() {
+    if (!rpc) return;
+    await rpc.destroy();
 }
 
 function updateActivity() {

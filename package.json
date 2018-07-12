@@ -1,9 +1,15 @@
 {
     "name": "vscode-rpc",
-    "displayName": "vscode-rpc",
+    "displayName": "VSCode Rich Presence",
     "description": "Visual Studio Code Discord Rich Presence",
-    "version": "0.0.1",
+    "author": "Matheus Pedroni",
+    "version": "1.0.1",
     "publisher": "mpedroni",
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/pedr0ni/vscode-rpc"
+    },
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.25.0"
     },
