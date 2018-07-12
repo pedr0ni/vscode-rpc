@@ -7,6 +7,8 @@ Extension for Visual Studio Code that shows your activity of the current Workspa
 * Shows your current activity in Discord
 * Timestamps
 
+![Screenshot 1](https://i.imgur.com/DO3fEqW.png)
+
 ## Bugs
 
 * Fixed README.md =)
