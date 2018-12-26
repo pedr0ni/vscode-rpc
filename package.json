@@ -6,8 +6,8 @@
     "version": "1.0.2",
     "publisher": "mpedroni",
     "repository": {
-		"type": "git",
-		"url": "https://github.com/pedr0ni/vscode-rpc"
+        "type": "git",
+        "url": "https://github.com/pedr0ni/vscode-rpc"
     },
     "icon": "icon.png",
     "engines": {
@@ -17,15 +17,15 @@
         "Other"
     ],
     "keywords": [
-		"discord",
-		"vscode",
-		"rich",
-		"presence",
-		"rich presence",
+        "discord",
+        "vscode",
+        "rich",
+        "presence",
+        "rich presence",
         "rpc",
         "vscode-rpc",
         "discord-rpc"
-	],
+    ],
     "activationEvents": [
         "onCommand:extension.activateRich",
         "onCommand:extension.disableRich"

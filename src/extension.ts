@@ -6,12 +6,12 @@ const ClientId = '466039114878418944';
 DiscordRPC.register(ClientId);
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 
-let langs = ['typescript', 'javascript', 'php', 'css', 'html', 'json', 'markdown'];
+let langs = ['typescript', 'javascript', 'php', 'css', 'html', 'json', 'markdown', 'csharp', 'aspnetcorerazor'];
 let timestamp: number;
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Extension initialized !');
-    timestamp = new Date().getTime() / 1000;
+    timestamp = new Date().getTime();
     let cmdActivate = vscode.commands.registerCommand('extension.activateRich', () => {
         
         vscode.window.showInformationMessage('Discord Rich Presence Activated !');
